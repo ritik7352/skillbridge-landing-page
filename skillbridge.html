@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Landing Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #1e1e2f;
+      color: #fff;
+    }
+
+    header {
+      background-color: #222;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 0;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff4c4c;
+    }
+
+    .scrolled {
+      background-color: #ff4c4c;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .extra-content {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .extra-content p {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="navbar">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Welcome to the skillBridge </h1>
+      <p>Online learning & career upskilling platform.</p>
+      <p>Founder- Ritik thakur</p>
+    </div>
+  </section>
+
+  <!-- Add extra content for scrolling -->
+  <section class="extra-content">
+    <h2>More Content</h2>
+    <p>SkillBridge is an online learning and career development platform designed to bridge the gap between education and real-world employment. It connects learners with industry-relevant skills, mentors, and practical experiences to help them get job-ready faster.</p>
+    <p>Online Courses & Certifications.</p>
+    <p>Mentorship & Live Projects.</p>
+    <p>Internship Programs.</p>
+    <p>Resume, LinkedIn & Interview Prep.</p>
+    <p>Job Placement Support</p>
+  </section>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
